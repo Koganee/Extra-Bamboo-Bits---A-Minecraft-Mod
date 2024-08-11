@@ -8,6 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -34,7 +35,7 @@ public class ModEvents {
     }
 
     @SubscribeEvent
-    public static void onLivingHurt(LivingHurtEvent event)
+    public static void onLivingAttack(LivingAttackEvent event)
     {
         LivingEntity entity = event.getEntity();
         if (entity instanceof Player) {
@@ -42,7 +43,7 @@ public class ModEvents {
 
             LivingEntity attacker = event.getSource().getEntity() instanceof LivingEntity ? (LivingEntity) event.getSource().getEntity() : null;
             if (attacker instanceof Mob && player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.IRON_CHESTPLATE_BAMBOO.get()) {
-                attacker.addEffect(new MobEffectInstance(ModEffects.BAMBOO_MOB_HURT_EFFECT.get(), 1));
+                attacker.hurt(attacker.damageSources().cactus(), 1.0f);
             }
         }
     }
