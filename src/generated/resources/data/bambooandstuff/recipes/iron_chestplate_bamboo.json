@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "bambooandstuff:bamboo_thorns"
+    },
+    "X": {
+      "item": "minecraft:iron_chestplate"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "AXA",
+    "AAA"
+  ],
+  "result": {
+    "item": "bambooandstuff:iron_chestplate_bamboo"
+  },
+  "show_notification": true
+}

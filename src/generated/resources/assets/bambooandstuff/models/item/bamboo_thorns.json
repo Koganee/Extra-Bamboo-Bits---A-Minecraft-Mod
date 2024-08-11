@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "bambooandstuff:item/bamboo_thorns"
+  }
+}
