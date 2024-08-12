@@ -22,6 +22,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.GOLD_CHESTPLATE_BAMBOO);
         simpleItem(ModItems.DIAMOND_CHESTPLATE_BAMBOO);
         simpleItem(ModItems.NETHERITE_CHESTPLATE_BAMBOO);
+        simpleItem(ModItems.BAMBOO_SHOOTER);
+        simpleItem(ModItems.BAMBOO_ARROW);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

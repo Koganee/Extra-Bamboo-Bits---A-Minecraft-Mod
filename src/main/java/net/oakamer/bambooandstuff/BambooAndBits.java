@@ -30,6 +30,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.oakamer.bambooandstuff.effect.ModEffects;
 import net.oakamer.bambooandstuff.item.ModItems;
 import net.oakamer.bambooandstuff.loot.ModLootModifiers;
+import net.oakamer.bambooandstuff.world.entity.ModEntityType;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -46,6 +47,7 @@ public class BambooAndBits
         ModItems.register(modEventBus);
         ModEffects.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+        ModEntityType.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -67,6 +69,8 @@ public class BambooAndBits
             event.accept(ModItems.GOLD_CHESTPLATE_BAMBOO);
             event.accept(ModItems.DIAMOND_CHESTPLATE_BAMBOO);
             event.accept(ModItems.NETHERITE_CHESTPLATE_BAMBOO);
+            event.accept(ModItems.BAMBOO_SHOOTER);
+            event.accept(ModItems.BAMBOO_ARROW);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

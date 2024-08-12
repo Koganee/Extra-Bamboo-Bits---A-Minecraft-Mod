@@ -58,5 +58,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_bamboo_thorns", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.BAMBOO_THORNS.get()).build()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BAMBOO_SHOOTER.get())
+                .pattern("AZA")
+                .pattern("AXA")
+                .pattern("AYA")
+                .define('X', Items.BAMBOO)
+                .define('Z', Items.FLINT)
+                .define('A', Items.AIR)
+                .define('Y', ModItems.BAMBOO_THORNS.get())
+                .unlockedBy("has_bamboo_thorns", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.BAMBOO_THORNS.get()).build()))
+                .save(pWriter);
     }
 }

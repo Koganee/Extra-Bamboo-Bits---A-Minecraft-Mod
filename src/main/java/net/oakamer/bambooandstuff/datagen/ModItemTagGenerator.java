@@ -19,6 +19,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        this.tag(ItemTags.ARROWS)
+                .add(ModItems.BAMBOO_ARROW.get());
     }
 
     public String getName()
