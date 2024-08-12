@@ -19,7 +19,25 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266655_.put(ArmorItem.Type.LEGGINGS, 5);
         p_266655_.put(ArmorItem.Type.CHESTPLATE, 6);
         p_266655_.put(ArmorItem.Type.HELMET, 2);
-    }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.of(ModItems.BAMBOO_THORNS.get()));
+    }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.of(ModItems.BAMBOO_THORNS.get())),
+    GOLD_BAMBOO("gold_bamboo", 7, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266655_) -> {
+        p_266655_.put(ArmorItem.Type.BOOTS, 1);
+        p_266655_.put(ArmorItem.Type.LEGGINGS, 3);
+        p_266655_.put(ArmorItem.Type.CHESTPLATE, 5);
+        p_266655_.put(ArmorItem.Type.HELMET, 2);
+    }), 9, SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> Ingredient.of(ModItems.BAMBOO_THORNS.get())),
+    DIAMOND_BAMBOO("diamond_bamboo", 33, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266655_) -> {
+        p_266655_.put(ArmorItem.Type.BOOTS, 3);
+        p_266655_.put(ArmorItem.Type.LEGGINGS, 6);
+        p_266655_.put(ArmorItem.Type.CHESTPLATE, 8);
+        p_266655_.put(ArmorItem.Type.HELMET, 3);
+    }), 9, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, 0.0F, () -> Ingredient.of(ModItems.BAMBOO_THORNS.get())),
+    NETHERITE_BAMBOO("netherite_bamboo", 37, Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266655_) -> {
+        p_266655_.put(ArmorItem.Type.BOOTS, 3);
+        p_266655_.put(ArmorItem.Type.LEGGINGS, 6);
+        p_266655_.put(ArmorItem.Type.CHESTPLATE, 8);
+        p_266655_.put(ArmorItem.Type.HELMET, 3);
+    }), 9, SoundEvents.ARMOR_EQUIP_NETHERITE, 0.0F, 0.0F, () -> Ingredient.of(ModItems.BAMBOO_THORNS.get()));
 
     public static final StringRepresentable.EnumCodec<ArmorMaterials> CODEC = StringRepresentable.fromEnum(ArmorMaterials::values);
     private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266653_) -> {

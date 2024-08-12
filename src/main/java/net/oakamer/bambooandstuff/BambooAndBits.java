@@ -64,6 +64,9 @@ public class BambooAndBits
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES)
             event.accept(ModItems.BAMBOO_THORNS);
             event.accept(ModItems.IRON_CHESTPLATE_BAMBOO);
+            event.accept(ModItems.GOLD_CHESTPLATE_BAMBOO);
+            event.accept(ModItems.DIAMOND_CHESTPLATE_BAMBOO);
+            event.accept(ModItems.NETHERITE_CHESTPLATE_BAMBOO);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

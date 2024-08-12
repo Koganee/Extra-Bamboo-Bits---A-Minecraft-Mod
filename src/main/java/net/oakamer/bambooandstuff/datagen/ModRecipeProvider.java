@@ -31,5 +31,32 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_bamboo_thorns", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.BAMBOO_THORNS.get()).build()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GOLD_CHESTPLATE_BAMBOO.get())
+                .pattern("AAA")
+                .pattern("AXA")
+                .pattern("AAA")
+                .define('A', ModItems.BAMBOO_THORNS.get())
+                .define('X', Items.GOLDEN_CHESTPLATE)
+                .unlockedBy("has_bamboo_thorns", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.BAMBOO_THORNS.get()).build()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DIAMOND_CHESTPLATE_BAMBOO.get())
+                .pattern("AAA")
+                .pattern("AXA")
+                .pattern("AAA")
+                .define('A', ModItems.BAMBOO_THORNS.get())
+                .define('X', Items.DIAMOND_CHESTPLATE)
+                .unlockedBy("has_bamboo_thorns", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.BAMBOO_THORNS.get()).build()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NETHERITE_CHESTPLATE_BAMBOO.get())
+                .pattern("AAA")
+                .pattern("AXA")
+                .pattern("AAA")
+                .define('A', ModItems.BAMBOO_THORNS.get())
+                .define('X', Items.NETHERITE_CHESTPLATE)
+                .unlockedBy("has_bamboo_thorns", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.BAMBOO_THORNS.get()).build()))
+                .save(pWriter);
     }
 }

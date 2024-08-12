@@ -45,6 +45,15 @@ public class ModEvents {
             if (attacker instanceof Mob && player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.IRON_CHESTPLATE_BAMBOO.get()) {
                 attacker.hurt(attacker.damageSources().cactus(), 1.0f);
             }
+            if (attacker instanceof Mob && player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.GOLD_CHESTPLATE_BAMBOO.get()) {
+                attacker.hurt(attacker.damageSources().cactus(), 1.0f);
+            }
+            if (attacker instanceof Mob && player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.DIAMOND_CHESTPLATE_BAMBOO.get()) {
+                attacker.hurt(attacker.damageSources().cactus(), 1.0f);
+            }
+            if (attacker instanceof Mob && player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.NETHERITE_CHESTPLATE_BAMBOO.get()) {
+                attacker.hurt(attacker.damageSources().cactus(), 1.0f);
+            }
         }
     }
 }
