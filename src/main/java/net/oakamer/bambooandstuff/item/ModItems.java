@@ -1,6 +1,7 @@
 package net.oakamer.bambooandstuff.item;
 
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArrowItem;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,9 +25,9 @@ public class ModItems {
     public static final RegistryObject<Item> NETHERITE_CHESTPLATE_BAMBOO = ITEMS.register("netherite_chestplate_bamboo",
             () -> new ArmorItem(ModArmorMaterials.NETHERITE_BAMBOO, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> BAMBOO_SHOOTER = ITEMS.register("bamboo_shooter",
-            () -> new BambooShooterItem(new Item.Properties().durability(500)));
+            () -> new BowItem(new Item.Properties().durability(500)));
     public static final RegistryObject<Item> BAMBOO_ARROW = ITEMS.register("bamboo_arrow",
-            () -> new BambooArrowItem(new Item.Properties(), 1.5f));
+            () -> new ArrowItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus)
     {

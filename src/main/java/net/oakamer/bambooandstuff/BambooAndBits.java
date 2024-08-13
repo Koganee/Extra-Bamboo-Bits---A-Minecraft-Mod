@@ -2,7 +2,9 @@ package net.oakamer.bambooandstuff;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -28,17 +30,22 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.oakamer.bambooandstuff.effect.ModEffects;
+import net.oakamer.bambooandstuff.entity.ModEntities;
+import net.oakamer.bambooandstuff.item.ModItemProperties;
 import net.oakamer.bambooandstuff.item.ModItems;
 import net.oakamer.bambooandstuff.loot.ModLootModifiers;
 import net.oakamer.bambooandstuff.world.entity.ModEntityType;
 import org.slf4j.Logger;
+import net.oakamer.bambooandstuff.client.renderer.entity.CustomPolarBearRenderer;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(BambooAndBits.MOD_ID)
 public class BambooAndBits
 {
     public static final String MOD_ID = "bambooandstuff";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
+
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MOD_ID);
 
     public BambooAndBits()
     {
@@ -48,6 +55,7 @@ public class BambooAndBits
         ModEffects.register(modEventBus);
         ModLootModifiers.register(modEventBus);
         ModEntityType.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -87,7 +95,9 @@ public class BambooAndBits
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            //ModItemProperties.addCustomItemProperties();
 
+            EntityRenderers.register(ModEntities.POLAR_BEAR_BAMBOO.get(), CustomPolarBearRenderer::new);
         }
     }
 }

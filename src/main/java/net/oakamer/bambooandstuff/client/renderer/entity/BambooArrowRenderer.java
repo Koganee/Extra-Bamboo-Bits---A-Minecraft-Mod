@@ -20,6 +20,6 @@ public class BambooArrowRenderer extends ArrowRenderer<BambooArrow> {
     public ResourceLocation getTextureLocation(BambooArrow pEntity) {
         Item referenceItem = pEntity.getPickupItem().getItem();
         ResourceLocation itemRegistryName = BuiltInRegistries.ITEM.getKey(referenceItem);
-        return new ResourceLocation(BambooAndBits.MOD_ID, "textures/entity/projectiles" + itemRegistryName.getPath() + ".png");
+        return new ResourceLocation(BambooAndBits.MOD_ID, "textures/item/bamboo_arrow.png");
     }
 }

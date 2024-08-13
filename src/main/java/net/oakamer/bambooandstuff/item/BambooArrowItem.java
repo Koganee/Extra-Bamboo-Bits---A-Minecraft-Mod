@@ -8,7 +8,6 @@ import net.minecraft.world.item.ArrowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
-import net.oakamer.bambooandstuff.client.renderer.entity.BambooArrowRenderer;
 import net.oakamer.bambooandstuff.world.entity.projectile.BambooArrow;
 
 public class BambooArrowItem extends ArrowItem {
